@@ -143,6 +143,12 @@ html {
   justify-content: center;
 }
 
+body {
+  background: url(../img/background.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 form {
   display: grid;
   grid-template-columns: 200px 200px;
