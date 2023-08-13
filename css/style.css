@@ -127,3 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+form {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 20px 70px;
+}
