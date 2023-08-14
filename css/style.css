@@ -136,7 +136,10 @@ table {
 /*Meyer reset end*/
 
 :root {
-  --font-color: rgb(212, 6, 219);
+  --neon-pink: #d406db;
+  --neon-red: #ff3131;
+  --neon-purple: #ab20fd;
+  --neon-green: #39ff14;
 }
 @font-face {
   font-family: "Mate SC";
@@ -165,13 +168,14 @@ form {
   grid-template-columns: 200px 200px;
   gap: 20px 70px;
   padding: 70px 50px;
-  border: 0.1px solid #ff3131;
+  border: 0.1px solid var(--neon-red);
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.342);
-  color: var(--font-color);
+  color: var(--neon-red);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  box-shadow: 0px 1px 25px 15px #ff3131, 0px 1px 50px 10px #ab20fd inset;
+  box-shadow: 0px 1px 25px 15px var(--neon-red),
+    0px 1px 50px 10px var(--neon-purple) inset;
 }
 
 label {
@@ -195,7 +199,7 @@ label {
   color: var(--font-color);
   background-color: transparent;
   border: 1px transparent solid;
-  box-shadow: 0 0 40px 5px #ab20fd inset;
+  box-shadow: 0 0 40px 5px var(--neon-purple) inset;
 
   transition: 0.5s;
 }
@@ -203,8 +207,8 @@ label {
 #submit-btn:hover {
   transform: scale(1.03);
   border-color: transparent;
-  box-shadow: 0 0 40px 5px #ab20fd;
-  color: rgb(26, 175, 26);
+  box-shadow: 0 0 40px 5px var(--neon-purple);
+  color: var(--neon-green);
 }
 
 #form-title {
