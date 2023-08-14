@@ -140,6 +140,7 @@ table {
   --neon-red: #ff3131;
   --neon-purple: #ab20fd;
   --neon-green: #39ff14;
+  --neon-blue: #fff01f;
 }
 @font-face {
   font-family: "Mate SC";
@@ -217,4 +218,8 @@ label {
 
 #form-title {
   font-size: 4.7rem;
+  color: var(--neon-pink);
+}
+#submit-btn {
+  color: var(--neon-blue);
 }
