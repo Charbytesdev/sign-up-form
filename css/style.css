@@ -133,6 +133,18 @@ table {
 *:after {
   box-sizing: border-box;
 }
+/*Meyer reset end*/
+
+:root {
+  --neon-pink: #d406db;
+  --neon-red: #ff3131;
+  --neon-purple: #ab20fd;
+  --neon-green: #39ff14;
+}
+@font-face {
+  font-family: "Mate SC";
+  src: url("../assets/font/MateSC-Regular.ttf") format("woff2");
+}
 
 body,
 html {
@@ -147,20 +159,27 @@ body {
   background: url(../img/background.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: "Mate SC", sans-serif;
+  font-weight: 900;
 }
 
 form {
   display: grid;
   grid-template-columns: 200px 200px;
   gap: 20px 70px;
-  border: 1px solid black;
   padding: 70px 50px;
+  border: 0.1px solid var(--neon-red);
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.342);
-  color: #ff3131;
+  color: var(--neon-red);
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  box-shadow: 0px 1px 14px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 1px 25px 15px var(--neon-red),
+    0px 1px 50px 10px var(--neon-purple) inset;
+}
+
+label {
+  font-size: 1.37rem;
 }
 
 #form-title,
@@ -171,6 +190,25 @@ form {
 
 #submit-btn {
   margin-top: 50px;
+  font-family: "Mate SC", sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  border-radius: 15px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: var(--font-color);
+  background-color: transparent;
+  border: 1px transparent solid;
+  box-shadow: 0 0 40px 5px var(--neon-purple) inset;
+
+  transition: 0.5s;
+}
+
+#submit-btn:hover {
+  transform: scale(1.03);
+  border-color: transparent;
+  box-shadow: 0 0 40px 5px var(--neon-purple);
+  color: var(--neon-green);
 }
 
 #form-title {
@@ -178,5 +216,5 @@ form {
 }
 
 #form-title {
-  font-size: 4rem;
+  font-size: 4.7rem;
 }
