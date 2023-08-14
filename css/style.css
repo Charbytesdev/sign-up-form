@@ -194,21 +194,23 @@ label {
   font-family: "Mate SC", sans-serif;
   text-transform: uppercase;
   font-size: 3rem;
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 0 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   color: var(--font-color);
   background-color: transparent;
-  border: 1px transparent solid;
-  box-shadow: 0 0 40px 5px var(--neon-purple) inset;
+  border: 2px var(--neon-purple) solid;
+  box-shadow: 0 0 40px 15px var(--neon-purple) inset;
 
   transition: 0.5s;
 }
 
 #submit-btn:hover {
   transform: scale(1.03);
-  border-color: transparent;
-  box-shadow: 0 0 40px 5px var(--neon-purple);
+  letter-spacing: 0.2rem;
+  box-shadow: 0 0 40px 15px var(--neon-purple) inset,
+    0 0 40px 10px var(--neon-purple);
   color: var(--neon-green);
 }
 
