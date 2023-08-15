@@ -7,7 +7,7 @@ function equalsPasswords(password, confirmPassword) {
   if (password.value === confirmPassword.value) {
     confirmPassword.setCustomValidity("");
   } else {
-    confirmPassword.setCustomValidity("Passwords Must be Matching.");
+    confirmPassword.setCustomValidity("Passwords do not match.");
   }
 }
 
