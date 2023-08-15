@@ -1,6 +1,7 @@
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const submitButton = document.getElementById("submit-btn");
+const phoneNumber = document.getElementById("phone-number");
 
 function equalsPasswords(password, confirmPassword) {
   if (password.value === confirmPassword.value) {
@@ -9,6 +10,10 @@ function equalsPasswords(password, confirmPassword) {
     confirmPassword.setCustomValidity("Passwords Must be Matching.");
   }
 }
+
+phoneNumber.addEventListener("keypress", (e) => {
+  if (isNaN(parseFloat(e.key))) e.preventDefault();
+});
 
 confirmPassword.addEventListener("keyup", () =>
   equalsPasswords(password, confirmPassword)
