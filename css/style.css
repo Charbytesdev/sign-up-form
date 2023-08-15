@@ -260,7 +260,7 @@ input:focus {
 }
 
 #tooltip {
-  margin-left: 10px;
+  margin-left: 15px;
   font-size: 20px;
   cursor: help;
   padding: 6px 13px;
