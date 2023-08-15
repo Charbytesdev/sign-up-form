@@ -11,9 +11,11 @@ function equalsPasswords(password, confirmPassword) {
   }
 }
 
-phoneNumber.addEventListener("keypress", (e) => {
+function preventNonNumeric(e) {
   if (isNaN(parseFloat(e.key))) e.preventDefault();
-});
+}
+
+phoneNumber.addEventListener("keypress", (e) => preventNonNumeric(e));
 
 confirmPassword.addEventListener("keyup", () =>
   equalsPasswords(password, confirmPassword)
