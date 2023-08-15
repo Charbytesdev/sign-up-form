@@ -136,7 +136,6 @@ table {
 /*Meyer reset end*/
 
 :root {
-  --neon-pink: #d406db;
   --neon-red: #ff3131;
   --neon-purple: #ab20fd;
   --neon-green: #39ff14;
@@ -165,14 +164,21 @@ body {
 }
 
 form {
+  color: gold;
+
   display: grid;
   grid-template-columns: 200px 200px;
   gap: 20px 70px;
   padding: 70px 50px;
-  border: 0.1px solid var(--neon-red);
+
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.342);
-  color: var(--neon-red);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0.6),
+    rgba(0, 0, 241, 0.6)
+  );
+
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   box-shadow: 0px 1px 25px 15px var(--neon-red),
@@ -198,7 +204,7 @@ label {
   padding: 0 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  color: var(--font-color);
+  color: gold;
   background-color: transparent;
   border: 2px var(--neon-purple) solid;
   box-shadow: 0 0 40px 15px var(--neon-purple) inset;
@@ -216,14 +222,9 @@ label {
 
 #form-title {
   margin-bottom: 50px;
-}
 
-#form-title {
   font-size: 4.7rem;
-  color: var(--neon-pink);
-}
-#submit-btn {
-  color: var(--neon-blue);
+  color: gold;
 }
 
 input {
