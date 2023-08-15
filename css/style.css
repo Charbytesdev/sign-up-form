@@ -225,3 +225,15 @@ label {
 #submit-btn {
   color: var(--neon-blue);
 }
+
+input {
+  outline: none;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
