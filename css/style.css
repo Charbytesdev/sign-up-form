@@ -252,3 +252,48 @@ input:focus {
 .required::after {
   content: "*";
 }
+
+#password-container {
+  display: flex;
+}
+
+#tooltip {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: help;
+  padding: 3px 10px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.3);
+}
+
+#tooltip-text {
+  z-index: 1;
+  opacity: 0;
+  color: gold;
+  width: 320px;
+  background-color: rgba(245, 7, 7, 0.7);
+  border-radius: 10px;
+  border: 2px gold solid;
+  box-shadow: 0 0 30px 10px var(--neon-red);
+
+  padding: 5px;
+  bottom: 44%;
+  transform: translateX(3.95rem);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#tooltip:hover + #tooltip-text {
+  opacity: 1;
+}
+
+#tooltip-text::after {
+  content: " ";
+  position: absolute;
+  top: 92px; /* At the bottom of the tooltip */
+  left: 49%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: gold transparent transparent transparent;
+}

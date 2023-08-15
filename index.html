@@ -33,8 +33,16 @@
 
         <div>
             <label for="password" class="required">Password</label>
-            <input type=password id="password" name="password" placeholder="Password" required>
-
+            <div id="password-container">
+                <input type=password id="password" name="password" placeholder="Password" required>
+                <span id="tooltip" data-tooltip="">?</span>
+                <div id="tooltip-text">
+                    <span>*Minimum 8 Characters</span>
+                    <div>*Must include Number</div>
+                    <div>*Must include Special Character</div>
+                    <div>*Must include BOTH Upper and Lowercase Characters</div>
+                </div>
+            </div>
         </div>
         <div>
             <label for="confirm-password" class="required"> Confirm Password</label>
