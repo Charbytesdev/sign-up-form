@@ -136,7 +136,6 @@ table {
 /*Meyer reset end*/
 
 :root {
-  --neon-pink: #d406db;
   --neon-red: #ff3131;
   --neon-purple: #ab20fd;
   --neon-green: #39ff14;
@@ -165,14 +164,21 @@ body {
 }
 
 form {
+  color: gold;
+
   display: grid;
   grid-template-columns: 200px 200px;
   gap: 20px 70px;
   padding: 70px 50px;
-  border: 0.1px solid var(--neon-red);
+  border: 4px solid rgb(255, 217, 0);
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.342);
-  color: var(--neon-red);
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0.6),
+    rgba(0, 0, 241, 0.6)
+  );
+
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   box-shadow: 0px 1px 25px 15px var(--neon-red),
@@ -194,32 +200,102 @@ label {
   font-family: "Mate SC", sans-serif;
   text-transform: uppercase;
   font-size: 3rem;
-  border-radius: 15px;
+  border-radius: 10px;
+  padding: 0 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
-  color: var(--font-color);
+  color: var(--neon-blue);
   background-color: transparent;
-  border: 1px transparent solid;
-  box-shadow: 0 0 40px 5px var(--neon-purple) inset;
+  border: 2px var(--neon-blue) solid;
+  box-shadow: 0 0 40px 15px var(--neon-red) inset;
 
   transition: 0.5s;
 }
 
 #submit-btn:hover {
   transform: scale(1.03);
-  border-color: transparent;
-  box-shadow: 0 0 40px 5px var(--neon-purple);
+  letter-spacing: 0.2rem;
+  box-shadow: 0 0 40px 15px var(--neon-green) inset,
+    0 0 40px 10px var(--neon-green);
+  border: 2px var(--neon-green) solid;
+
   color: var(--neon-green);
 }
 
 #form-title {
   margin-bottom: 50px;
+  font-size: 4.7rem;
+  color: gold;
 }
 
-#form-title {
-  font-size: 4.7rem;
-  color: var(--neon-pink);
+input {
+  outline: none;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-width: 5px;
+  color: white;
+  font-weight: 700;
+  padding: 5px;
+  padding-left: 10px;
 }
-#submit-btn {
-  color: var(--neon-blue);
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: var(--neon-green);
+}
+
+input:focus {
+  background-color: rgba(224, 248, 5, 0.555);
+}
+
+.required::after {
+  content: "*";
+}
+
+#password-container {
+  display: flex;
+}
+
+#tooltip {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: help;
+  padding: 6px 13px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.4);
+}
+
+#tooltip-text {
+  z-index: 1;
+  opacity: 0;
+  color: gold;
+  width: 255px;
+  background-color: rgba(245, 7, 7, 0.7);
+  border-radius: 10px;
+  border: 2px gold solid;
+  box-shadow: 0 0 30px 10px var(--neon-red);
+
+  padding: 5px;
+  bottom: 44%;
+  transform: translateX(6.77rem);
+  position: absolute;
+  transition: 0.5s;
+}
+
+#tooltip:hover + #tooltip-text {
+  opacity: 1;
+}
+
+#tooltip-text::after {
+  content: " ";
+  position: absolute;
+  top: 92px; /* At the bottom of the tooltip */
+  left: 49%;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: gold transparent transparent transparent;
 }
