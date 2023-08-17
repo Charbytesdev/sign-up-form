@@ -295,10 +295,12 @@ input:focus {
   transform: translateX(6.77rem);
   position: absolute;
   transition: 0.5s;
+  z-index: -1;
 }
 
 #tooltip:hover + #tooltip-text {
   opacity: 1;
+  z-index: 1;
 }
 
 #tooltip-text::after {
