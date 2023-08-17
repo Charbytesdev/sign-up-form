@@ -195,7 +195,8 @@ label {
   justify-self: center;
 }
 
-#submit-btn {
+#submit-btn,
+#login-btn {
   margin-top: 50px;
   font-family: "Mate SC", sans-serif;
   text-transform: uppercase;
@@ -212,7 +213,8 @@ label {
   transition: 0.5s;
 }
 
-#submit-btn:hover {
+#submit-btn:hover,
+#login-btn:hover {
   transform: scale(1.03);
   letter-spacing: 0.2rem;
   box-shadow: 0 0 40px 15px var(--neon-green) inset,
@@ -220,6 +222,16 @@ label {
   border: 2px var(--neon-green) solid;
 
   color: var(--neon-green);
+}
+
+#login-btn {
+  font-size: 1.3rem;
+  padding: 3px 7px;
+  margin: 0;
+}
+
+#login-btn:hover {
+  letter-spacing: 0.1rem;
 }
 
 #form-title {
@@ -298,4 +310,11 @@ input:focus {
   border-width: 8px;
   border-style: solid;
   border-color: gold transparent transparent transparent;
+}
+
+#already-member {
+  grid-column: 1/-1;
+  justify-self: end;
+  font-size: 1.2rem;
+  margin-top: 6.25px;
 }
