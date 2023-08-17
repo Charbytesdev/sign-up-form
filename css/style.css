@@ -151,8 +151,8 @@ html {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 body {
@@ -165,7 +165,7 @@ body {
 
 form {
   color: gold;
-
+  margin: auto;
   display: grid;
   grid-template-columns: 200px 200px;
   gap: 20px 70px;
@@ -295,10 +295,12 @@ input:focus {
   transform: translateX(6.77rem);
   position: absolute;
   transition: 0.5s;
+  z-index: -1;
 }
 
 #tooltip:hover + #tooltip-text {
   opacity: 1;
+  z-index: 1;
 }
 
 #tooltip-text::after {
@@ -317,4 +319,15 @@ input:focus {
   justify-self: end;
   font-size: 1.2rem;
   margin-top: 6.25px;
+}
+
+#sound-button {
+  margin: 1em 0em 0em 1em;
+  height: clamp(3em, 3vw, 5em);
+  width: clamp(3em, 3vw, 5em);
+
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-start;
+  justify-content: flex-start;
 }
