@@ -315,10 +315,7 @@ input:focus {
 }
 
 #already-member {
-  grid-column: 1/-1;
-  justify-self: end;
   font-size: 1.2rem;
-  margin-top: 6.25px;
 }
 
 #sound-button {
@@ -330,4 +327,79 @@ input:focus {
   cursor: pointer;
   align-self: flex-start;
   justify-content: flex-start;
+}
+
+#login-container {
+  margin-top: 6.25px;
+  grid-column: 1/-1;
+  place-self: end;
+  width: 250px;
+}
+
+@media (max-width: 800px) {
+  form {
+    transform: scale(0.95);
+    display: grid;
+    grid-template-columns: 100px;
+    place-items: center;
+    width: 350px;
+    gap: 10px 35px;
+    padding: 20px 70px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  #submit-btn {
+    margin-top: 20px;
+  }
+
+  #form-title {
+    margin-bottom: 10px;
+  }
+
+  label[for="password"] {
+    margin-left: 50px;
+  }
+
+  #password-container {
+    margin-left: 50px;
+  }
+
+  #tooltip-text {
+    bottom: 13%;
+    transform: translateX(-2rem);
+  }
+
+  #tooltip-text::after {
+    content: none;
+  }
+
+  #login-container {
+    place-items: center;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  #already-member {
+    font-size: 1rem;
+  }
+  #login-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  form {
+    transform: scale(0.95);
+  }
+}
+
+@media (min-width: 2000px) {
+  form {
+    transform: scale(1.5);
+  }
+  #sound-button {
+    transform: scale(1.5);
+    margin: 40px;
+  }
 }

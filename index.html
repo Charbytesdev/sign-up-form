@@ -37,7 +37,7 @@
             <div id="password-container">
                 <input type=password id="password" name="password" placeholder="Password"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
-                <span id="tooltip" data-tooltip="">?</span>
+                <span id="tooltip">?</span>
                 <div id="tooltip-text">
                     <span>*Minimum 8 Characters</span>
                     <div>*Must include Number</div>
@@ -52,7 +52,10 @@
         </div>
 
         <button id="submit-btn" type="submit">Submit</button>
-        <div id="already-member">already a member? <button id="login-btn">Login</button></div>
+        <div id="login-container">
+            <span id="already-member">already a member? <button id="login-btn">Login</button></span>
+        </div>
+
     </form>
 
     <audio id="button-click-audio" src="./sound/sound_button_click.mp3" muted></audio>
