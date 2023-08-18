@@ -8,7 +8,8 @@ Available live at: https://charbytesdev.github.io/sign-up-form
 
 ## Features
 
-- [x] Password and confirm password validation
+- [x] Password and confirm password validation.
+- [x] Tooltip for password format instructions.
 - [x] Consistent and compatible with all modern browsers.
 - [x] Compatible with all valid screen-sizes.
 - [x] Background music and button pressing sound effects (Sound-control button found on top left).
