@@ -334,7 +334,7 @@ input:focus {
   margin-top: 6.25px;
   grid-column: 1/-1;
   place-self: end;
-  width: 250px;
+  width: 260px;
 }
 
 @media (max-width: 800px) {
